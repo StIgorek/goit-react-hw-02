@@ -3,3 +3,13 @@
   display: flex;
   gap: 20px;
 }
+
+.btn {
+  width: 100px;
+}
+
+.btn:hover {
+  border-color: #121665;
+  background-color: #646cff;
+  color: white;
+}
