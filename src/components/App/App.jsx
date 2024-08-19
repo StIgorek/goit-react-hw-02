@@ -36,7 +36,11 @@ export default function App() {
   return (
     <div className={css.conteiner}>
       <Description />
-      <Options onUpdate={updateFeedback} onReset={resetClicks} />
+      <Options
+        onUpdate={updateFeedback}
+        onReset={resetClicks}
+        total={totalFeedback}
+      />
       {totalFeedback > 0 ? (
         <Feedback
           values={values}

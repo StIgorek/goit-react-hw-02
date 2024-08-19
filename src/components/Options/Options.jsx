@@ -1,6 +1,6 @@
 import css from "../Options/Options.module.css";
 
-export default function Options({ onUpdate, onReset }) {
+export default function Options({ onUpdate, onReset, total }) {
   return (
     <div className={css.list}>
       <button className={css.btn} onClick={() => onUpdate("good")}>
@@ -12,9 +12,11 @@ export default function Options({ onUpdate, onReset }) {
       <button className={css.btn} onClick={() => onUpdate("bad")}>
         Bad
       </button>
-      <button className={css.btn} onClick={onReset}>
-        Reset
-      </button>
+      {total > 0 && (
+        <button className={css.btn} onClick={onReset}>
+          Reset
+        </button>
+      )}
     </div>
   );
 }
